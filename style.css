@@ -318,7 +318,7 @@ span{
 
 /* RESUME SECTION */
 
-.section.resume {
+.achievements {
     transform: translateZ(-100vw);
     transform-origin: 50%;
 }
@@ -329,7 +329,7 @@ span{
     text-align: center;
     color: var(--main-color);
 }
-.resume {
+.achievements {
     padding-top: 2rem;
     padding-bottom: 28rem;
 }
