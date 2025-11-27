@@ -5,7 +5,7 @@ const navbarLinks = document.querySelectorAll('.navbar a');
 navbarLinks.forEach(link => {
     link.addEventListener('click', () => {
 
-        // remove 'active' class from all links
+        // remove 'active' class
         navbarLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
 
@@ -20,12 +20,10 @@ navbarLinks.forEach(link => {
     });
 });
 
-
 // RESUME PART (NO CHANGE)
 const resumeLists = document.querySelectorAll('.resume-list');
 const resumeBoxs = document.querySelectorAll('.resume-box');
 
-// resume section when clicking tab-list
 resumeLists.forEach((list, idx) => {
     list.addEventListener('click', () => {
         document.querySelector('.resume-list.active').classList.remove('active');
@@ -36,14 +34,25 @@ resumeLists.forEach((list, idx) => {
     });
 });
 
-
-// SECTION ORDER — FIXED ID (NO SPACES)
+// SECTION ORDER
 const sections = ["home", "qualification", "section resume", "family"];
 let currentIndex = 0;
 
 // BUTTONS
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
+
+// NEW: update navbar highlight based on currentIndex
+function updateNavbarActive() {
+    navbarLinks.forEach(link => link.classList.remove("active"));
+
+    const id = sections[currentIndex];
+    const activeLink = document.querySelector(`.navbar a[href="#${id}"]`);
+
+    if (activeLink) {
+        activeLink.classList.add("active");
+    }
+}
 
 function updateButtons() {
     prevBtn.classList.toggle("hidden", currentIndex === 0);
@@ -59,6 +68,7 @@ function goToSection(index) {
     }
 
     updateButtons();
+    updateNavbarActive(); // ← highlight navbar automatically
 }
 
 // BUTTON LISTENERS
@@ -78,3 +88,4 @@ nextBtn.addEventListener("click", () => {
 
 // INITIAL
 updateButtons();
+updateNavbarActive();
