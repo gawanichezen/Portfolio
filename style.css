@@ -324,7 +324,7 @@ span{
 }
 
 .title {
-    margin-top: 10rem;
+    margin-top: 3rem;
     font-size: 4rem;
     text-align: center;
     color: var(--main-color);
@@ -547,9 +547,7 @@ span{
 }
 
 
-
 .batchmates-section {
-    min-height: 100vh;     /* makes the whole section tall enough */
     padding: 8rem; /* gives it proper space like your other sections */
     display: block;
 }
