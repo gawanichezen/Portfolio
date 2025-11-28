@@ -494,7 +494,7 @@ span{
 
 .family-title {
     font-size: 4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: var(--main-color);
 }
 
@@ -536,7 +536,7 @@ span{
 
 /* Text */
 .family-desc {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     text-align: justify;
 }
