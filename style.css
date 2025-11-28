@@ -555,7 +555,7 @@ span{
 .batchmates-title {
     font-size: 4rem;
     margin-bottom: 30px;
-    margin-top: 5rem;
+    margin-top: 2rem;
     text-align: center;
     color: var(--main-color);
 }
@@ -564,8 +564,8 @@ span{
     display: grid;
     grid-template-columns: .4fr 1fr .4fr;
     align-items: center;
-    gap: 30px;
-    width: 90%;
+    gap: 0rem;
+    width: 100%;
     margin: auto;
 }
 
